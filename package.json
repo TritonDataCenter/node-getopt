@@ -1,0 +1,8 @@
+{
+	"name":		"getopt",
+	"version":	"0.0.1",
+	"description":	"POSIX.2/SUSv3-compliant getopt()",
+	"author":	"Dave Pacheco (dap@cs.brown.edu)",
+	"engines":	{ "node": "*" },
+	"main":		"./lib/getopt"
+}

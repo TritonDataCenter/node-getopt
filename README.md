@@ -22,6 +22,12 @@ Unlike more "modern" option parsers, the POSIX getopt() interface supports using
 the same option multiple times (e.g., "-vvv", commonly used to indicate level of
 verbosity).
 
+For reference, see the following:
+
+    http://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap12.html
+    http://pubs.opengroup.org/onlinepubs/009695399/functions/getopt.html
+    http://pubs.opengroup.org/onlinepubs/009695399/utilities/getopts.html
+
 
 Status
 ------

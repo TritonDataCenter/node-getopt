@@ -38,11 +38,10 @@ var test_cases = [ {
 	result: []
 }, {
 	optstr: ':l:(long)',
-	argv: ['-l', 'arg1', '--long=q', 'b', '--long', 'foo'],
+	argv: ['cmd', 'script', '-l', 'arg1', '--long=q', 'b', '--long', 'foo'],
 	result: [
 	    { option: 'l', optarg: 'arg1' },
-	    { option: 'l', optarg: 'q' },
-	    { option: 'l', optarg: 'foo' }
+	    { option: 'l', optarg: 'q' }
 	]
 }, {
 	optstr: 'l:(long)(longer)',

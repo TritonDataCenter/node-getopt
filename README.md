@@ -6,14 +6,13 @@ Overview
 --------
 
 node-getopt is a Node.js module providing an interface to the POSIX-defined
-getopt() function, a general-purpose command line parser that follows Utility
-Syntax Guidelines 3, 4, 5, 6, 7, 9, and 10 in the Base Definitions volume of
-IEEE Std 1003.1-2001.  Using these guidelines encourages common conventions
-among applications, including use of:
+getopt() function, a general-purpose command line parser that follows the POSIX
+guidelines for command-line utilities.  Using these guidelines encourages
+common conventions among applications, including use of:
 
-  o short option names (e.g., "-r")
-  o options with arguments (e.g., "-f filename or -ffilename")
-  o chaining short option names when options have no arguments (e.g., "-ra")
+    o short option names (e.g., "-r")
+    o options with arguments (e.g., "-f filename or -ffilename")
+    o chaining short option names when options have no arguments (e.g., "-ra")
 
 This implementation mirrors the Solaris getopt() implementation and supports
 long option names (e.g., "--recurse"), potentially with values specified using
@@ -23,7 +22,7 @@ Unlike other option parsers available for Node.js, the POSIX getopt() interface
 supports using the same option multiple times (e.g., "-vvv", commonly used to
 indicate level of verbosity).
 
-For further reference on the POSIX standards, see the following:
+For further reference on the relevant POSIX standards, see the following:
 
     http://pubs.opengroup.org/onlinepubs/009695399/functions/getopt.html
     http://pubs.opengroup.org/onlinepubs/009695399/utilities/getopts.html
@@ -81,12 +80,12 @@ option takes an argument and/or a sequence of strings in parentheses
 representing long-option aliases for the option name.
 
 Example option strings:
-	':r'		Command takes one option with no args: -r
-	':ra'		Command takes two option with no args: -r and -a
-	':raf:'		Command takes two option with no args: -r and -a
-			and a single option that takes an arg: -f
-	':f:(file)'	Command takes a single option with an argument: -f
-			-f can also be specified as --file
+        ':r'            Command takes one option with no args: -r
+        ':ra'           Command takes two option with no args: -r and -a
+        ':raf:'         Command takes two option with no args: -r and -a
+                        and a single option that takes an arg: -f
+        ':f:(file)'     Command takes a single option with an argument: -f
+                        -f can also be specified as --file
 
 The presence of a leading colon in the option string determines the behavior
 when an argument is not specified for an option which takes an argument.  See

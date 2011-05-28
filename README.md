@@ -57,7 +57,7 @@ Installation
 
 As an npm package, node-getopt is installed in the usual way:
 
-      % npm install getopt
+      % npm install posix-getopt
 
 
 API

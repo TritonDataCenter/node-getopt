@@ -1,5 +1,5 @@
 {
-	"name":		"getopt",
+	"name":		"posix-getopt",
 	"version":	"0.0.1",
 	"description":	"POSIX-style getopt()",
 	"author":	"Dave Pacheco (dap@cs.brown.edu)",

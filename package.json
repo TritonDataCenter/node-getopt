@@ -1,6 +1,6 @@
 {
 	"name":		"posix-getopt",
-	"version":	"0.0.1",
+	"version":	"1.0.0",
 	"description":	"POSIX-style getopt()",
 	"author":	"Dave Pacheco (dap@cs.brown.edu)",
 	"engines":	{ "node": "*" },

@@ -2,10 +2,9 @@
  * Tests getopt() itself.
  */
 var mod_path = require('path');
-require.paths.unshift(mod_path.dirname(__dirname) + '/lib');
 
 var mod_sys = require('sys');
-var mod_getopt = require('getopt');
+var mod_getopt = require('..');
 var mod_assert = require('assert');
 
 var test_cases = [ {

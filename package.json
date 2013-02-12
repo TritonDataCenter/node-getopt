@@ -4,5 +4,9 @@
 	"description":	"POSIX-style getopt()",
 	"author":	"Dave Pacheco (dap@cs.brown.edu)",
 	"engines":	{ "node": "*" },
-	"main":		"./lib/getopt"
+	"main":		"./lib/getopt",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/davepacheco/node-getopt.git"
+	}
 }

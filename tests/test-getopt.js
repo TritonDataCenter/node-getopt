@@ -50,7 +50,25 @@ var test_cases = [ {
 	optstr: ':la:r(recurse)(recur)f:(file)(filename)q',
 	argv: [],
 	result: []
-} ];
+}, {
+	optstr: '\u1000(help)\u1001(version)',
+	argv: ['cmd', 'script', '--help' ],
+	result: [
+	   { option: '\u1000' },
+	]
+}, {
+	optstr: '\u1000(help)\u1001(version)',
+	argv: ['cmd', 'script', '--version' ],
+	result: [
+	   { option: '\u1001' },
+	]
+}, {
+	optstr: '\u1000:(parallel)',
+	argv: ['cmd', 'script', '--parallel=100' ],
+	result: [
+	   { option: '\u1000', optarg: 100 },
+	]
+}];
 
 var parser, ii, arg, result;
 for (ii = 0; ii < test_cases.length; ii++) {

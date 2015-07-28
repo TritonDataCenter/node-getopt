@@ -6,6 +6,9 @@
 	"engines": {
 		"node": "*"
 	},
+	"scripts": {
+		"test": "for f in tests/*.js; do echo \"$f\"; node \"$f\" || exit 1; done"
+	},
 	"main": "./lib/getopt",
 	"repository": {
 		"type": "git",

@@ -135,15 +135,17 @@ coverage.  There are no known bugs.
 API
 ---
 
-### `new getopt.BasicParser(optstring, argv)`
+### `new getopt.BasicParser(optstring, argv[, optind])`
 
 Instantiates a new object for parsing the specified arguments using the
 specified option string.  This interface is closest to the traditional getopt()
 C function.  Callers first instantiate a BasicParser and then invoke the
 getopt() method to iterate the options as they would in C.  (This interface
-allows the same option to be specified multiple times.)  The first two arguments
-in "argv" are ignored, since they generally denote the path to the node
-executable and the script being run, so options start with the third element.
+allows the same option to be specified multiple times.)  The optional 3rd
+argument to the constructor `optind` is the number of arguments from `argv` to
+skip.  By default `optind` is set to `2`, so the first two arguments in `argv`
+are ignored, since they generally denote the path to the node executable and
+the script being run.
 
 The option string consists of an optional leading ":" (see below) followed by a
 sequence of option-specifiers.  Each option-specifier consists of a single

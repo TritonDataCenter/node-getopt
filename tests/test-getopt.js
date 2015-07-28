@@ -1,9 +1,6 @@
 /*
  * Tests getopt() itself.
  */
-var mod_path = require('path');
-
-var mod_sys = require('sys');
 var mod_getopt = require('..');
 var mod_assert = require('assert');
 
@@ -68,6 +65,21 @@ var test_cases = [ {
 	result: [
 	   { option: '\u1000', optarg: 100 },
 	]
+}, {
+	optstr: 'h',
+	argv: ['-h'],
+	result: [
+	   { option: 'h' },
+	],
+        optind: 0
+}, {
+	optstr: 'hv',
+	argv: ['foo', '-h', '-v' ],
+	result: [
+	   { option: 'h' },
+	   { option: 'v' },
+	],
+        optind: 1
 }];
 
 var parser, ii, arg, result;
@@ -75,7 +87,7 @@ for (ii = 0; ii < test_cases.length; ii++) {
 	console.log('test case %s: "%s" with argv = "%s"', ii + 1,
 	    test_cases[ii].optstr, test_cases[ii].argv);
 	parser = new mod_getopt.BasicParser(test_cases[ii].optstr,
-	    test_cases[ii].argv);
+	    test_cases[ii].argv, test_cases[ii].optind);
 	console.log(parser.gop_tokens);
 
 	result = [];

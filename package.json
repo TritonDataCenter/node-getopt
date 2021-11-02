@@ -12,7 +12,7 @@
 	"main": "./lib/getopt",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/davepacheco/node-getopt.git"
+		"url": "https://github.com/davepacheco/node-getopt.git"
 	},
 	"license": "MIT"
 }

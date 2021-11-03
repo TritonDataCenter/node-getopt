@@ -1,6 +1,6 @@
 {
 	"name": "posix-getopt",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "POSIX-style getopt()",
 	"author": "Dave Pacheco (dap@cs.brown.edu)",
 	"engines": {
@@ -12,7 +12,7 @@
 	"main": "./lib/getopt",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/davepacheco/node-getopt.git"
+		"url": "https://github.com/davepacheco/node-getopt.git"
 	},
 	"license": "MIT"
 }
